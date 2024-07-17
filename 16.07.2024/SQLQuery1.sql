@@ -69,6 +69,8 @@ Foreign Key (CourseID) References Courses (CourseID),
 Foreign Key (StudentID) References Student (StudentID),
 Primary Key (CourseID , StudentID)
 );
+
+
  insert into Student_Courses values
  (1,1),
  (2,2),
@@ -76,10 +78,15 @@ Primary Key (CourseID , StudentID)
  (4,4),
  (5,5);
 
-
+ create table test(ID int);
+ 
+ drop table test;
 
 select * from Courses;
 select * from Student;
 select * from Teachers;
 select * from TeacherDetails;
 select * from Student_Courses;
+select CourseID , CourseName , FirstName 
+From Courses 
+Inner Join Teachers on Courses.CourseID=Teachers.TeacherID;
