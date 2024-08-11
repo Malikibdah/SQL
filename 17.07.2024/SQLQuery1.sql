@@ -172,3 +172,9 @@ right JOIN Categories ON Books.UserID = Categories.ID;
 SELECT BookName, CategorieName
 FROM Books
 full JOIN Categories ON Books.UserID = Categories.ID;
+
+
+SELECT BookName, CategorieName
+FROM Books
+inner JOIN Books_Categories ON Books.ID = Books_Categories.BookID
+inner JOIN Categories ON Books_Categories.CatagorieID = Categories.ID;
